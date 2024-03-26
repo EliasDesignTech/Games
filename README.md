@@ -1,6 +1,6 @@
 <div align="center">
 
-# Landing Page
+# Games
 
 </div>
 
