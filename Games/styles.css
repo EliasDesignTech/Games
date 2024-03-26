@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#games{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #00d9ff, #8ceeff);
+}
+
+.container-games{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.games{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 27px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.cloud{
+    position: absolute;
+    bottom: -10%;
+    left: -45%;
+    width: 270px;
+    animation: cloud 2.4s infinite;
+}
+.cloud-two{
+    position: absolute;
+    top: -29%;
+    right: -50%;
+    width: 290px;
+    animation: cloud 2s infinite;
+}
+@keyframes cloud {
+    50%{
+        transform: scale(102%);
+    }    
+}
+
+.controller{
+    z-index: 800;
+    width: 240px;
+    animation: controller 4s infinite;
+}
+@keyframes controller {
+    50%{
+        transform: translateY(2%);
+    }
+}
+
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: .1s;
+}
+.game:hover{
+    transform: scale(105%);
+    transition: .2s;
+}
+.img-game{
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+}
+.memory{
+    background: url(./img/memory.png);
+    background-size: cover;
+}
+.tetris{
+    background: url(./img/tetris.png);
+    background-size: cover;
+}
+.game a{
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #009b47;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 20px;
+}
+.game a:hover{
+    transition: .2s;
+    background-color: #008d34;
+}
+
+@media (max-width: 1020px) {
+    .controller{
+        width: 190px;
+    }
+    .container-games{
+        height: auto;
+    }
+    #games{
+        display: flex;
+        justify-content: center;
+    }
+    .games{
+        flex-direction: column;
+        height: auto;
+    }
+    .cloud{
+        width: 170px;
+        left: -70px;
+        bottom: -10px;
+    }
+    .cloud-two{
+        right: -70px;
+        top: -29px;
+        width: 170px;
+    }
+}
+@media (max-width: 290px) {
+    .cloud{
+        display: none;
+    }
+    .cloud-two{
+            display: none;
+    }
+}

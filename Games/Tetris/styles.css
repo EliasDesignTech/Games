@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000;
+}
+
+.text-up{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+    gap: 7px;
+    color: #fff;
+}
+.text-up button{
+    background-color: #fff;
+    border: none;
+    padding: 2px;
+    font-size: 1.4rem;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.text-up button:hover{
+    transition: .2s;
+    background-color: #c8c8c8;
+}
+
+.back{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+.back:hover{
+  background-color: #c8c8c8;
+  transition: .2s;
+}
+
+#score{
+    font-size: 1.5rem;
+}
+
+.game-container {
+  border: 2px solid #00d0ffaa;
+}
+
+.btn-mobile{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+    opacity: 40%;
+}
+.btn-mobile button{
+    width: 59px;
+    height: 59px;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.btn-move{
+    display: flex;
+    gap: 20px;
+}
+
+.text-tutorial{
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+  opacity: 40%;
+}
+
+.gameover{
+    position: absolute;
+    padding: 10px 40px;
+    font-size: 2rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #181818;
+}
+
+.block {
+  background: url(./img/cube.png);
+  background-size: cover;
+}
